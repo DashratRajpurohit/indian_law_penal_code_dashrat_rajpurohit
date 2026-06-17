@@ -23,29 +23,28 @@
 > *(Update the image links below after deployment)*
 
 ### 🔐 Login Page
-<!-- Add screenshot: replace the src below -->
-![Login Page](<!-- LOGIN_PAGE_SCREENSHOT_URL -->)
+![Login Page](https://placehold.co/800x450/EAE7DC/000000?text=Login+Page)
 
 ### 🏠 Dashboard Home
-![Dashboard Home](<!-- DASHBOARD_HOME_SCREENSHOT_URL -->)
+![Dashboard Home](https://placehold.co/800x450/EAE7DC/000000?text=Dashboard+Home)
 
 ### ⚖️ Laws Listing Page
-![Laws Listing](<!-- LAWS_LIST_SCREENSHOT_URL -->)
+![Laws Listing](https://placehold.co/800x450/EAE7DC/000000?text=Laws+Listing)
 
 ### 🔍 Search & Filter
-![Search and Filter](<!-- SEARCH_FILTER_SCREENSHOT_URL -->)
+![Search and Filter](https://placehold.co/800x450/EAE7DC/000000?text=Search+and+Filter)
 
 ### 📊 Analytics Dashboard
-![Analytics Dashboard](<!-- ANALYTICS_SCREENSHOT_URL -->)
+![Analytics Dashboard](https://placehold.co/800x450/EAE7DC/000000?text=Analytics+Dashboard)
 
 ### ⚖️ Admin — User Management
-![Admin Users](<!-- ADMIN_USERS_SCREENSHOT_URL -->)
+![Admin Users](https://placehold.co/800x450/EAE7DC/000000?text=Admin+User+Management)
 
 ### 📋 Law Detail Page
-![Law Detail](<!-- LAW_DETAIL_SCREENSHOT_URL -->)
+![Law Detail](https://placehold.co/800x450/EAE7DC/000000?text=Law+Detail+Page)
 
 ### 🌙 Dark Mode
-![Dark Mode](<!-- DARK_MODE_SCREENSHOT_URL -->)
+![Dark Mode](https://placehold.co/800x450/0b0f19/EAE7DC?text=Dark+Mode)
 
 ---
 
@@ -329,7 +328,7 @@ graph TD
 
 ### Base URL
 - **Local:** `http://localhost:5000/api/v1`
-- **Production:** `<!-- LIVE_BACKEND_URL -->/api/v1`
+- **Production:** `https://indian-law-penal-code-dashrat-rajpurohit.onrender.com/api/v1`
 
 ### 📚 Laws — Basic CRUD
 
