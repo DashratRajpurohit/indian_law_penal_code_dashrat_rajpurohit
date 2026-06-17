@@ -23,28 +23,28 @@
 > *(Update the image links below after deployment)*
 
 ### 🔐 Login Page
-![Login Page](https://placehold.co/800x450/EAE7DC/000000?text=Login+Page)
+![Login Page](screenshots/login.png)
 
 ### 🏠 Dashboard Home
-![Dashboard Home](https://placehold.co/800x450/EAE7DC/000000?text=Dashboard+Home)
+![Dashboard Home](screenshots/dashboard.png)
 
 ### ⚖️ Laws Listing Page
-![Laws Listing](https://placehold.co/800x450/EAE7DC/000000?text=Laws+Listing)
+![Laws Listing](screenshots/laws.png)
 
 ### 🔍 Search & Filter
-![Search and Filter](https://placehold.co/800x450/EAE7DC/000000?text=Search+and+Filter)
+![Search and Filter](screenshots/search.png)
 
 ### 📊 Analytics Dashboard
-![Analytics Dashboard](https://placehold.co/800x450/EAE7DC/000000?text=Analytics+Dashboard)
+![Analytics Dashboard](screenshots/analytics.png)
 
 ### ⚖️ Admin — User Management
-![Admin Users](https://placehold.co/800x450/EAE7DC/000000?text=Admin+User+Management)
+![Admin Users](screenshots/admin_users.png)
 
 ### 📋 Law Detail Page
-![Law Detail](https://placehold.co/800x450/EAE7DC/000000?text=Law+Detail+Page)
+![Law Detail](screenshots/law_detail.png)
 
 ### 🌙 Dark Mode
-![Dark Mode](https://placehold.co/800x450/0b0f19/EAE7DC?text=Dark+Mode)
+![Dark Mode](screenshots/dark_mode.png)
 
 ---
 
