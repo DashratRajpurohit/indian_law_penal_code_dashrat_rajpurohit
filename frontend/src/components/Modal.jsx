@@ -1,5 +1,5 @@
 // Reusable Brutalist Modal component with backdrop blurring
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
 const Modal = ({ isOpen, onClose, title, children, footer = null }) => {

@@ -12,6 +12,9 @@ export default {
         'jurist-red': '#D90429',
         'jurist-black': '#000000',
         'jurist-white': '#FFFFFF',
+        'brand-beige': '#EAE7DC',
+        'brand-crimson': '#D90429',
+        'brand-black': '#000000',
       },
       borderRadius: {
         'DEFAULT': '0px',

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import API from '../services/api';
 import toast from 'react-hot-toast';
@@ -13,8 +13,8 @@ const Analytics = () => {
   // States for stats
   const [byCategory, setByCategory] = useState([]);
   const [mostViewed, setMostViewed] = useState([]);
-  const [complexity, setComplexity] = useState({ high: 12, medium: 28, low: 60 });
-  const [systemKpis, setSystemKpis] = useState({
+  const [complexity] = useState({ high: 12, medium: 28, low: 60 });
+  const [systemKpis] = useState({
     activeCases: 284,
     disposalRate: '87.4%',
     avgDisposalTime: '124 Days',
@@ -53,7 +53,7 @@ const Analytics = () => {
 
         setByCategory(cats);
         setMostViewed(viewed);
-      } catch (err) {
+      } catch {
         // Suppress and rely on high-fidelity mocks
       } finally {
         setLoading(false);

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useAuth } from '../hooks/useAuth';
@@ -28,7 +28,7 @@ const LawDetail = () => {
           { firNumber: 'FIR/2026/1102', suspect: 'R. SINGH', investigator: 'INSP. PATEL', status: 'Trial Phase', date: '2026-05-24' },
           { firNumber: 'FIR/2026/0430', suspect: 'V. VERMA', investigator: 'SUB-INSP. DEVI', status: 'Disposed', date: '2026-04-18' }
         ]);
-      } catch (err) {
+      } catch {
         toast.error('Failed to load statutory record details.');
         navigate('/laws');
       } finally {
@@ -45,7 +45,7 @@ const LawDetail = () => {
       await API.patch(endpoint);
       toast.success(`Section ${law.sectionNumber} successfully ${law.isArchived ? 'restored' : 'archived'}.`);
       setLaw({ ...law, isArchived: !law.isArchived });
-    } catch (err) {
+    } catch {
       toast.error('Failed to update archive status.');
     }
   };

@@ -1,4 +1,3 @@
-import React from 'react';
 import { useAuth } from '../hooks/useAuth';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleTheme } from '../store/uiSlice';

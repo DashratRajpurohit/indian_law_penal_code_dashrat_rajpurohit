@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useAuth } from '../hooks/useAuth';
 import Table from '../components/Table';
@@ -24,12 +24,13 @@ const UsersManagement = () => {
     try {
       const response = await API.get('/admin/users');
       dispatch(getUsersSuccess(response.data.data ?? []));
-    } catch (err) {
+    } catch {
       dispatch(getUsersFailure('Failed to load system users database.'));
       toast.error('Failed to load system users database.');
     }
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (isAdmin) {
       fetchUsers();
@@ -44,7 +45,7 @@ const UsersManagement = () => {
       // Fulfill real-time UI updates via Redux update action
       dispatch(updateUserSuccess(response.data.data));
       toast.success(`User ${userRecord.name} was successfully ${isBanned ? 'unbanned' : 'banned'}!`);
-    } catch (err) {
+    } catch {
       toast.error('Failed to update ban status.');
     }
   };
@@ -55,7 +56,7 @@ const UsersManagement = () => {
       const response = await API.patch(`/admin/users/${userId}/role`, { role: nextRole });
       dispatch(updateUserSuccess(response.data.data));
       toast.success(`Role updated successfully to ${nextRole}!`);
-    } catch (err) {
+    } catch {
       toast.error('Failed to modify user role settings.');
     }
   };

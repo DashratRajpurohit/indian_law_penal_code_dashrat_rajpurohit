@@ -1,4 +1,3 @@
-import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate, Link } from 'react-router-dom';
@@ -31,7 +30,8 @@ const Register = () => {
     onSubmit: async (values, { setSubmitting }) => {
       dispatch(authStart());
       try {
-        const { confirmPassword, ...registerPayload } = values;
+        // eslint-disable-next-line no-unused-vars
+        const { confirmPassword: _confirmPassword, ...registerPayload } = values;
         const response = await API.post('/auth/register', registerPayload);
         dispatch(authSuccess({ token: response.data.data.token, user: response.data.data.user }));
         toast.success(`Account created successfully! Welcome, ${response.data.data.user.name}!`);

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import { Helmet } from 'react-helmet-async';
 import API from '../services/api';
@@ -6,7 +6,7 @@ import toast from 'react-hot-toast';
 import SkeletonLoader from '../components/SkeletonLoader';
 
 const Dashboard = () => {
-  const { user } = useAuth();
+  useAuth();
   const [stats, setStats] = useState({
     totalLaws: 511,
     activeLaws: 498,
@@ -32,7 +32,7 @@ const Dashboard = () => {
         });
         
         setCategoryStats(categoriesRes.data.data || []);
-      } catch (err) {
+      } catch {
         // Fall back to defaults in case backend stats aren't fully populated yet
       } finally {
         setLoading(false);

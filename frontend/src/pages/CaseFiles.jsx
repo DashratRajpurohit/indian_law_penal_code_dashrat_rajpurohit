@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import toast from 'react-hot-toast';
-import Button from '../components/Button';
 import Modal from '../components/Modal';
 import Input from '../components/Input';
 import { useAuth } from '../hooks/useAuth';
@@ -96,7 +95,7 @@ const CaseFiles = () => {
     toast.success('Case file status reassigned.');
   };
 
-  const renderColumn = (title, statusName, bgColor, borderColor) => {
+  const renderColumn = (title, statusName, bgColor) => {
     const filtered = cases.filter((c) => c.status === statusName);
     return (
       <div className="flex-1 flex flex-col min-w-[280px] border-2 border-black bg-white shadow-brutalist-md text-left">

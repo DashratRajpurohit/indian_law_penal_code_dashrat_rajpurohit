@@ -1,5 +1,4 @@
 // Reusable Brutalist Card component for metrics and summaries
-import React from 'react';
 
 const Cards = ({ title, value, icon, trend = null, trendType = 'up', className = '' }) => {
   const isUp = trendType === 'up';

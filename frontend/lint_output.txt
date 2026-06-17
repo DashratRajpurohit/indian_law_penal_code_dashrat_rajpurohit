@@ -1,0 +1,96 @@
+
+> frontend@0.0.0 lint
+> eslint .
+
+
+/home/dashrat/Public/Study/All-Projects/Full-Stack/indian_law_penal_code_dashrat_rajpurohit/frontend/src/components/Button.jsx
+  2:8  error  'React' is defined but never used  no-unused-vars
+
+/home/dashrat/Public/Study/All-Projects/Full-Stack/indian_law_penal_code_dashrat_rajpurohit/frontend/src/components/Cards.jsx
+  2:8  error  'React' is defined but never used  no-unused-vars
+
+/home/dashrat/Public/Study/All-Projects/Full-Stack/indian_law_penal_code_dashrat_rajpurohit/frontend/src/components/Input.jsx
+  2:8  error  'React' is defined but never used  no-unused-vars
+
+/home/dashrat/Public/Study/All-Projects/Full-Stack/indian_law_penal_code_dashrat_rajpurohit/frontend/src/components/Modal.jsx
+  2:8  error  'React' is defined but never used  no-unused-vars
+
+/home/dashrat/Public/Study/All-Projects/Full-Stack/indian_law_penal_code_dashrat_rajpurohit/frontend/src/components/SkeletonLoader.jsx
+  1:8  error  'React' is defined but never used  no-unused-vars
+
+/home/dashrat/Public/Study/All-Projects/Full-Stack/indian_law_penal_code_dashrat_rajpurohit/frontend/src/components/Table.jsx
+  2:8  error  'React' is defined but never used  no-unused-vars
+
+/home/dashrat/Public/Study/All-Projects/Full-Stack/indian_law_penal_code_dashrat_rajpurohit/frontend/src/pages/Analytics.jsx
+   1:8   error  'React' is defined but never used                   no-unused-vars
+  16:22  error  'setComplexity' is assigned a value but never used  no-unused-vars
+  17:22  error  'setSystemKpis' is assigned a value but never used  no-unused-vars
+  56:16  error  'err' is defined but never used                     no-unused-vars
+
+/home/dashrat/Public/Study/All-Projects/Full-Stack/indian_law_penal_code_dashrat_rajpurohit/frontend/src/pages/CaseFiles.jsx
+   1:8   error  'React' is defined but never used        no-unused-vars
+   4:8   error  'Button' is defined but never used       no-unused-vars
+  99:53  error  'borderColor' is defined but never used  no-unused-vars
+
+/home/dashrat/Public/Study/All-Projects/Full-Stack/indian_law_penal_code_dashrat_rajpurohit/frontend/src/pages/Dashboard.jsx
+   1:8   error  'React' is defined but never used          no-unused-vars
+   9:11  error  'user' is assigned a value but never used  no-unused-vars
+  35:16  error  'err' is defined but never used            no-unused-vars
+
+/home/dashrat/Public/Study/All-Projects/Full-Stack/indian_law_penal_code_dashrat_rajpurohit/frontend/src/pages/Landing.jsx
+  1:8  error  'React' is defined but never used  no-unused-vars
+
+/home/dashrat/Public/Study/All-Projects/Full-Stack/indian_law_penal_code_dashrat_rajpurohit/frontend/src/pages/LawDetail.jsx
+   1:8   error  'React' is defined but never used  no-unused-vars
+  31:16  error  'err' is defined but never used    no-unused-vars
+  48:14  error  'err' is defined but never used    no-unused-vars
+
+/home/dashrat/Public/Study/All-Projects/Full-Stack/indian_law_penal_code_dashrat_rajpurohit/frontend/src/pages/LawsListing.jsx
+    1:8   error    'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    no-unused-vars
+   82:14  error    'err' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      no-unused-vars
+   91:5   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  89 |   // Run search when filters update
+  90 |   useEffect(() => {
+> 91 |     fetchLaws(1, false);
+     |     ^^^^^^^^^ Avoid calling setState() directly within an effect
+  92 |   }, [chapter, severity, cognizableOnly, bailableOnly]);
+  93 |
+  94 |   const handleExecuteScan = (e) => {  react-hooks/set-state-in-effect
+   92:6   warning  React Hook useEffect has a missing dependency: 'fetchLaws'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         react-hooks/exhaustive-deps
+  105:9   error    'handleOpenDossier' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               no-unused-vars
+  116:16  error    'err' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      no-unused-vars
+  128:14  error    'err' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      no-unused-vars
+
+/home/dashrat/Public/Study/All-Projects/Full-Stack/indian_law_penal_code_dashrat_rajpurohit/frontend/src/pages/Login.jsx
+  1:8  error  'React' is defined but never used  no-unused-vars
+
+/home/dashrat/Public/Study/All-Projects/Full-Stack/indian_law_penal_code_dashrat_rajpurohit/frontend/src/pages/Onboarding.jsx
+  1:8  error  'React' is defined but never used  no-unused-vars
+
+/home/dashrat/Public/Study/All-Projects/Full-Stack/indian_law_penal_code_dashrat_rajpurohit/frontend/src/pages/Profile.jsx
+  1:8  error  'React' is defined but never used  no-unused-vars
+
+/home/dashrat/Public/Study/All-Projects/Full-Stack/indian_law_penal_code_dashrat_rajpurohit/frontend/src/pages/Register.jsx
+   1:8   error  'React' is defined but never used                     no-unused-vars
+  34:17  error  'confirmPassword' is assigned a value but never used  no-unused-vars
+
+/home/dashrat/Public/Study/All-Projects/Full-Stack/indian_law_penal_code_dashrat_rajpurohit/frontend/src/pages/TeamDirectory.jsx
+  1:8  error  'React' is defined but never used   no-unused-vars
+  4:8  error  'Button' is defined but never used  no-unused-vars
+
+/home/dashrat/Public/Study/All-Projects/Full-Stack/indian_law_penal_code_dashrat_rajpurohit/frontend/src/pages/UsersManagement.jsx
+   1:8   error    'React' is defined but never used                                                                              no-unused-vars
+  27:14  error    'err' is defined but never used                                                                                no-unused-vars
+  37:6   warning  React Hook useEffect has a missing dependency: 'fetchUsers'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  47:14  error    'err' is defined but never used                                                                                no-unused-vars
+  58:14  error    'err' is defined but never used                                                                                no-unused-vars
+
+✖ 39 problems (37 errors, 2 warnings)
+

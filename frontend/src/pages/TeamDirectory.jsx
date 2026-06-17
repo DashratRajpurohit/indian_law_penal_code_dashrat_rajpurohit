@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import toast from 'react-hot-toast';
-import Button from '../components/Button';
 import Modal from '../components/Modal';
 import Input from '../components/Input';
 import { useAuth } from '../hooks/useAuth';

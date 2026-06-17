@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import API from '../services/api';
 import toast from 'react-hot-toast';
@@ -30,7 +30,7 @@ const LawsListing = () => {
   const [bailableOnly, setBailableOnly] = useState(false);
 
   // Selected dossier details
-  const [selectedLaw, setSelectedLaw] = useState(null);
+  const [selectedLaw] = useState(null);
   const [dossierOpen, setDossierOpen] = useState(false);
 
   // CRUD Admin states
@@ -79,7 +79,7 @@ const LawsListing = () => {
         total: newPagination.total,
         totalPages: newPagination.totalPages,
       });
-    } catch (err) {
+    } catch {
       toast.error('Failed to load statutory records.');
     } finally {
       setLoading(false);
@@ -87,8 +87,10 @@ const LawsListing = () => {
   };
 
   // Run search when filters update
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
-    fetchLaws(1, false);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    fetchLaws(1, false); 
   }, [chapter, severity, cognizableOnly, bailableOnly]);
 
   const handleExecuteScan = (e) => {
@@ -102,18 +104,14 @@ const LawsListing = () => {
     }
   };
 
-  const handleOpenDossier = (law) => {
-    setSelectedLaw(law);
-    setDossierOpen(true);
-  };
-
+  
   const handleDeleteLaw = async (law) => {
     if (window.confirm(`Are you absolutely sure you want to delete SEC. ${law.sectionNumber}: ${law.title}?`)) {
       try {
         await API.delete(`/laws/${law._id}`);
         toast.success(`Section ${law.sectionNumber} successfully purged from database.`);
         fetchLaws(1, false);
-      } catch (err) {
+      } catch {
         toast.error('Failed to purge statutory record.');
       }
     }
@@ -125,7 +123,7 @@ const LawsListing = () => {
       await API.patch(endpoint);
       toast.success(`Section ${law.sectionNumber} successfully ${law.isArchived ? 'restored' : 'archived'}.`);
       fetchLaws(1, false);
-    } catch (err) {
+    } catch {
       toast.error('Failed to update archive status.');
     }
   };

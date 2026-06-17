@@ -1,4 +1,3 @@
-import React from 'react';
 
 const SkeletonLoader = ({ type = 'card', count = 1 }) => {
   const items = Array.from({ length: count });
