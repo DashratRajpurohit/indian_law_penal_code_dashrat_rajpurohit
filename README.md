@@ -4,10 +4,10 @@
 
 ### Full Stack MERN Project — Admin & User Dashboard System
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Click_Here-brightgreen?style=for-the-badge)](<!-- LIVE_FRONTEND_URL -->)
-[![Backend API](https://img.shields.io/badge/🔗_Backend_API-Live-blue?style=for-the-badge)](<!-- LIVE_BACKEND_URL -->)
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Click_Here-brightgreen?style=for-the-badge)](https://indian-law-penal.vercel.app/)
+[![Backend API](https://img.shields.io/badge/🔗_Backend_API-Live-blue?style=for-the-badge)](https://indian-law-penal-code-dashrat-rajpurohit.onrender.com)
 [![Postman Docs](https://img.shields.io/badge/📮_Postman-API_Docs-orange?style=for-the-badge)](https://documenter.getpostman.com/view/50839172/2sBXwmRDfh)
-[![GitHub Repo](https://img.shields.io/badge/📁_GitHub-Repository-black?style=for-the-badge)](<!-- GITHUB_REPO_URL -->)
+[![GitHub Repo](https://img.shields.io/badge/📁_GitHub-Repository-black?style=for-the-badge)](https://github.com/DashratRajpurohit/indian_law_penal_code_dashrat_rajpurohit)
 
 ---
 
@@ -53,10 +53,10 @@
 
 | Resource | URL |
 |---|---|
-| 🌐 Frontend (Live) | <!-- LIVE_FRONTEND_URL --> |
-| 🔗 Backend API (Live) | <!-- LIVE_BACKEND_URL --> |
+| 🌐 Frontend (Live) | https://indian-law-penal.vercel.app/ |
+| 🔗 Backend API (Live) | https://indian-law-penal-code-dashrat-rajpurohit.onrender.com |
 | 📮 Postman Collection | https://documenter.getpostman.com/view/50839172/2sBXwmRDfh |
-| 💾 GitHub Repository | <!-- GITHUB_REPO_URL --> |
+| 💾 GitHub Repository | https://github.com/DashratRajpurohit/indian_law_penal_code_dashrat_rajpurohit |
 | 📁 Dataset (Google Drive) | https://drive.google.com/drive/folders/1O4tgEesnymnLO06_qrCacGBDxSBkJeSH |
 
 ---
@@ -240,67 +240,31 @@ graph TD
 
 ## 📁 Project Structure
 
-> [!NOTE]
-> This repository currently contains the fully completed **Phase 1 (Backend Development)** codebase. The `frontend/` directory is scheduled for implementation in Phase 2 and is not currently present in the active workspace tree.
-
-### Backend Folder Structure
+### Project Repository Structure
 
 ```text
-backend/
-├── postman/                         # Postman collections and API testing files
+.
+├── backend/                         # Express API Backend
+│   ├── src/
+│   │   ├── controllers/             # Business logic
+│   │   ├── middlewares/             # Auth, Rate Limits, Validation
+│   │   ├── models/                  # Mongoose Schemas (Law, User, Report)
+│   │   ├── routes/                  # API routing
+│   │   └── utils/                   # Helpers
+│   └── server.js                    # Entry point
 │
-├── src/
-│   ├── config/
-│   │   └── db.js                    # MongoDB database connection
-│   │
-│   ├── controllers/
-│   │   ├── adminController.js       # Admin-related operations
-│   │   ├── analyticsController.js   # Analytics and reporting logic
-│   │   ├── authController.js        # Authentication & user management
-│   │   ├── jwtController.js         # JWT token generation/validation
-│   │   ├── lawController.js         # Law CRUD operations
-│   │   └── statsController.js       # Statistics endpoints
-│   │
-│   ├── middlewares/
-│   │   ├── authMiddleware.js        # Authentication middleware
-│   │   ├── errorHandler.js          # Global error handling
-│   │   ├── practiceMiddlewares.js   # Custom application middlewares
-│   │   ├── rateLimiter.js           # API rate limiting
-│   │   └── requestLogger.js         # Request logging middleware
-│   │
-│   ├── models/
-│   │   ├── Law.js                   # Law schema/model
-│   │   ├── Report.js                # Report schema/model
-│   │   ├── TokenBlacklist.js        # Blacklisted JWT tokens
-│   │   └── User.js                  # User schema/model
-│   │
-│   ├── routes/
-│   │   ├── adminRoutes.js           # Admin API routes
-│   │   ├── analyticsRoutes.js       # Analytics API routes
-│   │   ├── authRoutes.js            # Authentication routes
-│   │   ├── filterRoutes.js          # Filtering endpoints
-│   │   ├── jwtRoutes.js             # JWT management routes
-│   │   ├── lawRoutes.js             # Law-related routes
-│   │   ├── middlewareRoutes.js      # Middleware testing routes
-│   │   ├── searchRoutes.js          # Search functionality routes
-│   │   └── statsRoutes.js           # Statistics routes
-│   │
-│   ├── scripts/
-│   │   ├── api.test.js              # API integration tests
-│   │   └── seed.js                  # Database seeding script
-│   │
-│   ├── services/
-│   │   └── lawService.js            # Business logic layer for laws
-│   │
-│   └── utils/
-│       ├── apiResponse.js           # Standardized API responses
-│       ├── asyncHandler.js          # Async error wrapper
-│       └── pagination.js            # Pagination utilities
+├── frontend/                        # React Vite Frontend (Brutalist UI)
+│   ├── public/                      # Static assets & Sitemap
+│   ├── src/
+│   │   ├── components/              # Reusable UI components
+│   │   ├── pages/                   # Main views (Dashboard, Admin, Auth)
+│   │   ├── services/                # Axios API clients
+│   │   ├── store/                   # Redux toolkit store
+│   │   └── styles/                  # Global CSS & Tailwind imports
+│   ├── index.html                   # HTML template
+│   └── tailwind.config.js           # Tailwind theme & tokens
 │
-├── .gitignore
-├── package.json
-├── package-lock.json
-└── server.js                        # Application entry point
+└── README.md
 ```
 
 ---
@@ -677,9 +641,9 @@ DEBUG_HTTP_LOGS=false
 Notes:
 - `PORT` is injected automatically by Render, so you do not need to set it manually.
 - This backend requires a MongoDB connection string. Use MongoDB Atlas or another hosted MongoDB provider.
-- After deploy, your backend base URL will look like `https://<your-render-service>.onrender.com` and the frontend should use `https://<your-render-service>.onrender.com/api/v1`.
+- After deploy, your backend base URL will look like `https://indian-law-penal-code-dashrat-rajpurohit.onrender.com` and the frontend should use `https://indian-law-penal-code-dashrat-rajpurohit.onrender.com/api/v1`.
 
-**Backend Live URL:** `<!-- LIVE_BACKEND_URL -->`
+**Backend Live URL:** `https://indian-law-penal-code-dashrat-rajpurohit.onrender.com`
 
 ### Frontend Deployment (Vercel / Netlify)
 
@@ -694,7 +658,7 @@ npm run build
 dist
 ```
 
-**Frontend Live URL:** `<!-- LIVE_FRONTEND_URL -->`
+**Frontend Live URL:** `https://indian-law-penal.vercel.app/`
 
 ---
 
